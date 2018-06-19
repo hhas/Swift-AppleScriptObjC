@@ -1,0 +1,3 @@
+README
+
+Demonstrates how to call AppleScript via the AppleScript-ObjC framework (ASOC) in a Swift-Cocoa app.

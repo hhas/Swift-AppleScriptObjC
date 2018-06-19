@@ -10,6 +10,10 @@
 		4F32BCC420D8272F00C99480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F32BCC320D8272F00C99480 /* AppDelegate.swift */; };
 		4F32BCC620D8273100C99480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F32BCC520D8273100C99480 /* Assets.xcassets */; };
 		4F32BCC920D8273100C99480 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F32BCC720D8273100C99480 /* MainMenu.xib */; };
+		4F32BCD220D827D500C99480 /* iTunesBridge.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 4F32BCD120D827D500C99480 /* iTunesBridge.applescript */; };
+		4F32BCD520D8479E00C99480 /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F32BCD420D8479E00C99480 /* AppleScriptObjC.framework */; };
+		4F32BCD720D861BD00C99480 /* iTunesBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F32BCD620D861BD00C99480 /* iTunesBridge.swift */; };
+		4F32BCD920D8905200C99480 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4F32BCD820D8905200C99480 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		4F32BCC820D8273100C99480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4F32BCCA20D8273100C99480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F32BCCB20D8273100C99480 /* Swift_AppleScriptObjC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_AppleScriptObjC.entitlements; sourceTree = "<group>"; };
+		4F32BCD120D827D500C99480 /* iTunesBridge.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = iTunesBridge.applescript; sourceTree = "<group>"; };
+		4F32BCD420D8479E00C99480 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		4F32BCD620D861BD00C99480 /* iTunesBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesBridge.swift; sourceTree = "<group>"; };
+		4F32BCD820D8905200C99480 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F32BCD520D8479E00C99480 /* AppleScriptObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +44,10 @@
 		4F32BCB720D8272F00C99480 = {
 			isa = PBXGroup;
 			children = (
+				4F32BCD820D8905200C99480 /* README */,
 				4F32BCC220D8272F00C99480 /* Swift-AppleScriptObjC */,
 				4F32BCC120D8272F00C99480 /* Products */,
+				4F32BCD320D8479D00C99480 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,12 +63,22 @@
 			isa = PBXGroup;
 			children = (
 				4F32BCC320D8272F00C99480 /* AppDelegate.swift */,
+				4F32BCD620D861BD00C99480 /* iTunesBridge.swift */,
+				4F32BCD120D827D500C99480 /* iTunesBridge.applescript */,
 				4F32BCC520D8273100C99480 /* Assets.xcassets */,
 				4F32BCC720D8273100C99480 /* MainMenu.xib */,
 				4F32BCCA20D8273100C99480 /* Info.plist */,
 				4F32BCCB20D8273100C99480 /* Swift_AppleScriptObjC.entitlements */,
 			);
 			path = "Swift-AppleScriptObjC";
+			sourceTree = "<group>";
+		};
+		4F32BCD320D8479D00C99480 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F32BCD420D8479E00C99480 /* AppleScriptObjC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +112,11 @@
 				TargetAttributes = {
 					4F32BCBF20D8272F00C99480 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -117,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F32BCD920D8905200C99480 /* README in Resources */,
 				4F32BCC620D8273100C99480 /* Assets.xcassets in Resources */,
 				4F32BCC920D8273100C99480 /* MainMenu.xib in Resources */,
 			);
@@ -129,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F32BCD220D827D500C99480 /* iTunesBridge.applescript in Sources */,
 				4F32BCC420D8272F00C99480 /* AppDelegate.swift in Sources */,
+				4F32BCD720D861BD00C99480 /* iTunesBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -252,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -264,7 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Swift-AppleScriptObjC/Swift_AppleScriptObjC.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
@@ -273,8 +302,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.nuggle.Swift-AppleScriptObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -283,7 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Swift-AppleScriptObjC/Swift_AppleScriptObjC.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 27XZ82KJ77;
@@ -292,8 +323,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.nuggle.Swift-AppleScriptObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

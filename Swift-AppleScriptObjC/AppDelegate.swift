@@ -60,9 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func updateTrackInfo() {
         if let trackInfo = self.iTunesBridge.trackInfo { // nil indicates error, e.g. current track not available
-            self.trackName = trackInfo["trackName"] as! NSString
-            self.trackArtist = trackInfo["trackArtist"] as! NSString
-            self.trackAlbum = trackInfo["trackAlbum"] as! NSString
+            self.trackName = (trackInfo["trackName"] as! NSString)
+            self.trackArtist = (trackInfo["trackArtist"] as! NSString)
+            self.trackAlbum = (trackInfo["trackAlbum"] as! NSString)
             self.trackDuration = self.iTunesBridge.trackDuration
             self.playerState = self.iTunesBridge.playerState
         }

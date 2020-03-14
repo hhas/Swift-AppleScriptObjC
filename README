@@ -1,3 +1,16 @@
 README
 
 Demonstrates how to call AppleScript via the AppleScript-ObjC framework (ASOC) in a Swift-Cocoa app.
+
+Modified for macOS 10.15+, which renamed iTunes to Music.
+
+
+Caution: The AppleScript performs minimal error checking so the app will fail silently if the following requirements are not met:
+
+- The Plist.info file must contain an "NSAppleEventsUsageDescription" entry.
+
+- If Hardened Runtime is enabled, the Apple Events exception in Targets > Signing & Capabilities must be selected.
+
+- If sandboxing is enabled, the appropriate "com.apple.Music.library..." entitlements must be declared.
+
+- The user grants the app Authorization to control Music.app when first prompted by macOS.

@@ -5,14 +5,14 @@ script iTunesBridge
 	property parent : class "NSObject"
 	
 	
-	to isRunning() -- () -> NSNumber (Bool)
+	to _isRunning() -- () -> NSNumber (Bool)
 		-- AppleScript will automatically launch apps before sending Apple events;
 		-- if that is undesirable, check the app object's `running` property first
-		return running of application id "com.apple.Music"
+        return running of application id "com.apple.Music"
 	end isRunning
 	
 	
-	to playerState() -- () -> NSNumber (PlayerState)
+	to _playerState() -- () -> NSNumber (PlayerState)
 		tell application id "com.apple.Music"
 			if running then
 				set currentState to player state

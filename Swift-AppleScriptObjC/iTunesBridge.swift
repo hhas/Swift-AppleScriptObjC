@@ -13,9 +13,8 @@ import Cocoa
     // so Swift Bool/Int/Double values MUST be explicitly boxed/unboxed as NSNumber
     // when passing to/from AppleScript.
     
-    var isRunning: NSNumber { get } // Bool
-    
-    var playerState: NSNumber { get }
+    var _isRunning: NSNumber { get } // Bool
+    var _playerState: NSNumber { get }
     
     var trackInfo: [NSString:AnyObject]? { get }
     var trackDuration: NSNumber { get }
@@ -30,9 +29,9 @@ import Cocoa
 
 extension iTunesBridge { // native Swift versions of the above ASOC APIs
     
-    var isRunning: Bool { return self.isRunning.boolValue }
+    var isRunning: Bool { return self._isRunning.boolValue }
     
-    var playerState: PlayerState { return PlayerState(rawValue: self.playerState as! Int)! }
+    var playerState: PlayerState { return PlayerState(rawValue: self._playerState as! Int)! }
     
 }
 

@@ -1,11 +1,8 @@
 README
 
-Demonstrates how to call AppleScript via the AppleScript-ObjC framework (ASOC) in a Swift-Cocoa app.
+A simple "remote control" for Music.app which demonstrates how to call AppleScript via the AppleScript-ObjC (ASOC) bridge within a Swift-Cocoa app. 
 
-Modified for macOS 10.15+, which renamed iTunes to Music.
-
-
-Caution: The AppleScript performs minimal error checking so the app will fail silently if the following requirements are not met:
+Caution: The AppleScript code lacks detailed error reporting and the Swift code's error handling is minimal. The app will fail *silently* if the following requirements are not met:
 
 - The Plist.info file must contain an "NSAppleEventsUsageDescription" entry.
 
@@ -14,3 +11,5 @@ Caution: The AppleScript performs minimal error checking so the app will fail si
 - If sandboxing is enabled, the appropriate "com.apple.Music.library..." entitlements must be declared.
 
 - The user grants the app Authorization to control Music.app when first prompted by macOS.
+
+This code is released into the public domain.
